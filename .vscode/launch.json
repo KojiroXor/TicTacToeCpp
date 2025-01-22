@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug C++",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/a.out", // Percorso dell'eseguibile
+            "args": [], // Argomenti da passare al programma
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}", // Directory di lavoro
+            "environment": [],
+            "externalConsole": false, // Usa il terminale interno di VS Code
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Abilita il formato avanzato della stampa",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build", // Nome del task di compilazione (vedi sotto)
+            "miDebuggerPath": "/usr/bin/gdb", // Percorso del debugger (modifica se necessario)
+            "logging": {
+                "engineLogging": false
+            }
+        }
+    ]
+}
